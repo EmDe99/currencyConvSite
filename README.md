@@ -12,7 +12,7 @@ An idea that came to me during my international exchange. I quick and easy way o
 
 ## Overview
 
-In this project, I created a full-stack application, designed to give the user current exchange rates for multiple different currencys and cryptos. I used Node.js deployed to Azure to create a back-end which handled calls to the APIs. The frontend was built using only standard HTML, CSS and JS. I will take my experiences from this project and apply them to more advanced future projects.
+In this project, I created a full-stack application, designed to give the user current exchange rates for multiple different currencys and cryptos. I used Node.js deployed to Azure to create a back-end which handled calls to the APIs. The frontend was built using only standard HTML, CSS and JS. I will take my experiences from this project and apply them to more advanced future projects. I put more thought to the deployment and function to the website rather than its design. 
                                                                                      
 ### The goal
 
