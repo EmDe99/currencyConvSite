@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Currency Conversion</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="icon" type="image/x-icon" href="/assets/favicon-32x32.png">
+</head>
+
+<body>
+    <div id="container">
+        <div id="colorBackground">
+            <div id="header">
+                <h1>Hitta din växelkurs nu!</h1>
+                <p>Välja valutor nedan och se hur mycket den nuvarande kursen är.</p>
+            </div>
+        </div>
+        
+        <div id="converters">
+            <div id="inputBoxes" class="customSelect"> 
+                <img src="https://flagcdn.com/w40/se.png" srcset="https://flagcdn.com/w80/se.png 2x" width="40" alt="Sweden" class="flagIcon">
+                <img src="usa-flag.png" alt="USD" class="flag-icon" class="flagIcon">
+                <select class="dropdownCurrency" id="fromDropdown"></select>
+                <select class="dropdownCurrency" id="toDropdown"></select>
+                <input type="number" class="inputConverter" id="fromCurrencyInp" value=1 min="0"> 
+                <input type="number" class="inputConverter" id="toCurrencyInp" min="0" value="1">
+            </div>
+
+            <div id="updateRateInfo">
+                <p id="updateTime"></p>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div id="footerContent">
+                <div class="footerStyle">
+                    <img src="/assets/cloud.webp" alt="cloud" class="iconImage">
+                    <p class="footerText"><a href="https://www.exchangerate-api.com" target="_blank">By Exchange Rate API</a></p>
+                </div>
+                <div class="footerStyle">
+                    <img src="/assets/contactIcon.webp" alt="contactIcon" class="iconImage">
+                    <p class="footerText"><a href="">Contact</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="js/script.js"></script>
+</body>
+
+</html>
