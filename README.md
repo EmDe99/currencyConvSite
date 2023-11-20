@@ -5,8 +5,7 @@ An idea that came to me during my international exchange. I quick and easy way o
 ## Table of contents
 
   - [Overview](#overview)
-  - [Screenshot](#screenshot)
-  - [Links](#links)
+  - [The goal](#the-goal)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
 
@@ -18,22 +17,28 @@ In this project, I created a full-stack application, designed to give the user c
 
 Users should be able to:
 
-- Choose between several different currencys
-- Input their desired amount
-- See the amount they would get in the converted currency
+- Choose between several different currencys.
+- Input their desired amount.
+- See the amount they would get in the converted currency.
+- Clearly see what country the currency is from.
 
 
 ### Built with
 
+- HTML, CSS
 - JavaScript
-- localStorage (Web API)
 - Node.js
+- localStorage (Web API)
 - Azure
 
 ### What I learned
 
 - I learned how to build a web application from scratch using back-end technologies like Node.js and further improved my knowledge in JavaScript. 
 
-- I learned how to use Node.js and deployment to Azure.
+- I learned how to use Node.js and deploy it to Azure.
 
-- I further enchanced my knowledge on how to read and parse data from a JSON file and store it locally for a set amount of time. 
+- I learned how to set up a RESTful API and fetch data dynamically from it when changes occur on the website.
+
+- I further enchanced my knowledge on how to read and parse data from a JSON file and store it locally for a set amount of time.
+
+- Next step is to learn a framework (React, AngularJS etc).

@@ -1,4 +1,3 @@
-// Function to check if currency conversion rates should be fetched or loaded from localStorage
 function waitLoad() {
   let shouldFetch = false;
   let data = null;
@@ -30,6 +29,9 @@ function waitLoad() {
   } else {
     handleConvUpdating(data);
   }
+
+  getFromFlags("EUR");
+  getToFlags("EUR");
 }
 
 // Object holding references to DOM elements
@@ -41,8 +43,6 @@ const domElements = {
   updateRateInfo: document.querySelector("#updateRateInfo"),
   dropdownCurrencies: document.querySelectorAll(".dropdownCurrency"),
 };
-
-// Function to fetch conversion rates from the node.js backend deployed on Azure
 
 /**
  * Function to fetch conversion rates from the node.js backend deployed on Azure.
@@ -66,19 +66,46 @@ async function getConversionRates() {
   }
 }
 
-async function getFlags() {
-  const url = "https://convbackend.azurewebsites.net/flags";
+// TODO: Merge getFromFlags and getToFlags into one function
+// TODO: Fix alt text for flags
+async function getFromFlags(curr) {
+  const url = "https://convbackend.azurewebsites.net/image";
   const options = {
     method: "GET",
+    headers: {
+      Currency: curr,
+    },
   };
 
   try {
     const response = await fetch(url, options);
-    const result = await response.json();
-    console.log(result);
-    return result;
+    const result = await response.blob();
+    const flag = document.getElementById("fromIcon");
+    const dataURL = URL.createObjectURL(result);
+    flag.src = dataURL;
   } catch (error) {
     console.error(error);
+  }
+}
+
+async function getToFlags(curr) {
+  const url = "https://convbackend.azurewebsites.net/image";
+  const options = {
+    method: "GET",
+    headers: {
+      Currency: curr,
+    },
+  };
+
+  try {
+    const response = await fetch(url, options);
+    const result = await response.blob();
+    const flag = document.getElementById("toIcon");
+    const dataURL = URL.createObjectURL(result);
+    console.log(dataURL);
+    flag.src = dataURL;
+  } catch (error) {
+    console.error("Error fetching from API: ", error);
   }
 }
 
@@ -128,10 +155,14 @@ function handleConvUpdating(result) {
 
   // Event listeners for dropdown changes
   toDropdown.onchange = function () {
+    let curr = toDropdown.value;
+    getToFlags(curr);
     dropdownCurrencyChange(result, 1);
   };
 
   fromDropdown.onchange = function () {
+    let curr = fromDropdown.value;
+    getFromFlags(curr);
     dropdownCurrencyChange(result, 2);
   };
 
@@ -191,7 +222,7 @@ function lastUpdateInfo(updateInfo) {
   const updateP = document.getElementById("updateTime");
   const dateTime = new Date(updateInfo);
 
-  updateP.innerText = "Senast uppdaterad: " + dateTime.toLocaleString() + " JST";
+  updateP.innerText = "Last updated: " + dateTime.toLocaleString() + " JST";
   updateText.append(updateP);
 }
 
@@ -221,5 +252,3 @@ function updateCurrencyRealTime(data) {
 
 // Initial function call to check if rates should be fetched or loaded
 waitLoad();
-
-// - - - Dropdown - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
