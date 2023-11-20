@@ -1,6 +1,6 @@
 # Currency Conversion Website
 
-An idea that came to me during my international exchange. I quick and easy way of finding current exchange rates. 
+An idea that came to me during my international exchange. A quick and easy way of finding current exchange rates. 
 
 ## Table of contents
 
