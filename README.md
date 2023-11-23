@@ -6,7 +6,8 @@ An idea that came to me during my international exchange. A quick and easy way o
 
   - [Overview](#overview)
   - [The goal](#the-goal)
-  - [Built with](#built-with)
+  - [Built with](#built-with
+  - [TODO] (#TODO)
   - [What I learned](#what-i-learned)
 
 ## Overview
@@ -30,6 +31,12 @@ Users should be able to:
 - Node.js
 - localStorage (Web API)
 - Azure
+
+### TODO
+
+- Still need to add better responsiveness for use on smaller screens.
+- Fix bugs related to the inputs.
+- Update dropdowns to incorperate flag icons. 
 
 ### What I learned
 
