@@ -6,8 +6,8 @@ An idea that came to me during my international exchange. A quick and easy way o
 
   - [Overview](#overview)
   - [The goal](#the-goal)
-  - [Built with](#built-with
-  - [TODO] (#TODO)
+  - [Built with](#built-with)
+  - [TODO](#TODO)
   - [What I learned](#what-i-learned)
 
 ## Overview
