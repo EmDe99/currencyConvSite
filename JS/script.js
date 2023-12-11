@@ -59,7 +59,6 @@ async function getConversionRates() {
     const response = await fetch(url, options);
     const result = await response.json();
     localStorage.setItem("rates", JSON.stringify(result)); // Store rates data in localStorage
-    console.log(result);
     return result;
   } catch (error) {
     console.error(error);
@@ -102,7 +101,6 @@ async function getToFlags(curr) {
     const result = await response.blob();
     const flag = document.getElementById("toIcon");
     const dataURL = URL.createObjectURL(result);
-    console.log(dataURL);
     flag.src = dataURL;
   } catch (error) {
     console.error("Error fetching from API: ", error);
