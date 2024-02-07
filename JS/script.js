@@ -220,7 +220,7 @@ function lastUpdateInfo(updateInfo) {
   const updateP = document.getElementById("updateTime");
   const dateTime = new Date(updateInfo);
 
-  updateP.innerText = "Last updated: " + dateTime.toLocaleString() + " JST";
+  updateP.innerText = "Last updated: " + dateTime.toLocaleString() + " CET";
   updateText.append(updateP);
 }
 
