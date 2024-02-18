@@ -12,7 +12,7 @@ An idea that came to me during my international exchange. A quick and easy way o
 
 ## Overview
 
-In this project, I created a full-stack application, designed to give the user current exchange rates for multiple different currencys and cryptos. I used Node.js deployed to Azure to create a back-end which handled calls to the APIs. The frontend was built using only standard HTML, CSS and JS. I will take my experiences from this project and apply them to more advanced future projects. I put more thought to the deployment and function of the website rather than its design. 
+In this project, I created a full-stack application, designed to give the user current exchange rates for multiple different currencys and cryptos. I used Node.js deployed to Azure to create a backend which handled calls to the APIs. The frontend was built using only standard HTML, CSS and JS. I will take my experiences from this project and apply them to more advanced future projects. I put more thought to the deployment and function of the website rather than it's design. 
                                                                                      
 ### The goal
 
@@ -40,12 +40,14 @@ Users should be able to:
 
 ### What I learned
 
-- I learned how to build a web application from scratch using back-end technologies like Node.js and further improved my knowledge in JavaScript. 
+- I learned how to build a web application from scratch using backend technologies like Node.js and further improved my knowledge in JavaScript. 
 
 - I learned how to use Node.js and deploy it to Azure.
 
 - I learned how to set up a RESTful API and fetch data dynamically from it when changes occur on the website.
 
 - I further enchanced my knowledge on how to read and parse data from a JSON file and store it locally for a set amount of time.
+
+- I learned github actions and how to automatically test code.
 
 - Next step is to learn a framework (React, AngularJS etc).
